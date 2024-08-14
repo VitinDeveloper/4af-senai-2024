@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.css'
+import Button from '../Button/index'
 
 function NavBar() {
   return (
@@ -11,7 +12,7 @@ function NavBar() {
       </div>
 
       <div className='navbar-user'>
-        <button className=''>Quero Ir</button>
+        <Button/>
       </div>
 
     </div>

@@ -1,0 +1,9 @@
+.logo-container {
+    display: flex;
+}
+
+.logo {
+    width: 90px;
+    border-radius: 10px;
+    margin-right: 5px;
+}

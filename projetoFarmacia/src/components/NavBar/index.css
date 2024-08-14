@@ -6,17 +6,7 @@
     align-items: center;
 }
 
-.navbar-logo {
+.navbar-left {
     display: flex;
-    align-items: center;
-}
-
-.logopequena-navbar {
-    width: 90px;
-    border-radius: 10px;
     margin: 10px;
-}
-
-.farmacia-title {
-    color: var(--cor-2);
 }

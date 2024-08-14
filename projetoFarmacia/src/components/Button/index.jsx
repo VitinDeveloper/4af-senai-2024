@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.css'
 
-function index() {
+function Button() {
   return (
     <div>
       <button className='button'>Quero Participar</button>
@@ -9,4 +9,4 @@ function index() {
   )
 }
 
-export default index
+export default Button

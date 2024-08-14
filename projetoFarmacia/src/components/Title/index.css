@@ -1,0 +1,8 @@
+.title-container {
+    display: flex;
+}
+
+.title {
+    margin-left: 5px;
+    color: var(--cor-2);
+}

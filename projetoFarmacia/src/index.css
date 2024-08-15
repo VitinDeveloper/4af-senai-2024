@@ -1,14 +1,24 @@
-html,body,#root{
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
+html,
+body,
+#root {
     height: 100%;
     margin: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --cor-1: #e23e57;
     --cor-2: #ffffff;
     --cor-3: #e96a7e;
     --cor-4: #ce1f3a;
     --cor-5: #e6e6e6;
     --cor-6: #ef97a4;
+}
+
+* {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }

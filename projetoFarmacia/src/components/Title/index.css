@@ -1,8 +1,10 @@
 .title-container {
     display: flex;
+    align-items: center;
 }
 
 .title {
     margin-left: 5px;
     color: var(--cor-2);
+    font-size: 50px;
 }

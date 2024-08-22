@@ -1,3 +1,5 @@
+/* Parte principal do main */
+
 .main-container {
     display: flex;
     height: 845px;
@@ -5,12 +7,25 @@
     background-color: var(--cor-1);
 }
 
+/* Início do main da esquerda */
+
 .main-left {
+    height: 845px;
     width: 960px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+/* Parte de cima do main-left */
+
+.main-top-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
 }
 
 .main-titles-left {
@@ -23,14 +38,59 @@
 .main-title-left-top {
     font-size: 35px;
     color: var(--cor-2);
+    margin: 0px;
 }
 
-.main-title-left {
-    width: 700px;
+.main-title-left-bottom {
+    width: 840px;
     font-size: 25px;
-    margin: 0px;
+    text-align: center;
     color: var(--cor-2);
 }
+
+.main-image-left {
+    display: flex;
+}
+
+.main-left-image {
+    height: 275px;
+    border-radius: 20px;
+}
+
+/* Parte de baixo do main-left */
+
+.main-bottom-left {
+    display: flex;
+    height: 300px;
+    width: 840px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-bottom-left-display {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-4);
+    box-shadow: 0px 5px 30px var(--cor-4);
+    border-radius: 8px;
+}
+
+.main-display {
+    color: var(--cor-2);
+    font-size: 75px;
+    text-shadow: 0px 1px 30px var(--cor-2);
+}
+
+.main-bottom-left-button {
+    display: flex;
+    margin-top: 15px;
+}
+
+/* Início do main da direita */
 
 .main-right {
     width: 960px;
@@ -54,5 +114,5 @@
 
 .main-image {
     border-radius: 20px;
-    margin: 30px;
+    margin-top: 10px;
 }

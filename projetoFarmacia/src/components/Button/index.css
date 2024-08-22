@@ -1,4 +1,4 @@
-.button {
+.button.primary {
     background-color: transparent;
     color: var(--cor-5);
     font-size: 30px;
@@ -11,7 +11,25 @@
     width: 230px;
 }
 
-.button:hover {
+.button.primary:hover {
+    background-color: var(--cor-5);
+    color: var(--cor-1);
+}
+
+.button.secondary {
+    background-color: transparent;
+    color: var(--cor-5);
+    font-size: 30px;
+    border: 3px solid var(--cor-5);
+    border-radius: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 15px;
+    height: 60px;
+    width: 230px;
+}
+
+.button.secondary:hover {
     background-color: var(--cor-5);
     color: var(--cor-1);
 }

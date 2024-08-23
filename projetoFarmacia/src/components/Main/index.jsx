@@ -5,10 +5,25 @@ import ControllerPassword from '../ControllerPassword'
 
 function Main() {
   const [displayText, setDisplayText] = useState('Espere ser Chamado!');
+  const [fila, setFila] = useState([]);
 
-  const atualizarDisplay = (texto) => {
-    setDisplayText(texto);
+  const atualizarDisplay = (text) => {
+    setDisplayText(text);
   };
+
+  const atualizarFila = (novaFila) => {
+    setFila(novaFila);
+  };
+
+  const formatarFila = () => {
+    if (fila.length === 0) {
+      return <div className='main-fila-vazia'>A fila está vazia!</div>;
+    }
+    return fila.map((senha, index) => (
+      <div key={index}>{`${senha.tipo} ${senha.numero}`}</div>
+    ));
+  };
+
   function queroParticipar() {
     alert("Quero Participar")
   }
@@ -23,19 +38,19 @@ function Main() {
         </div>
         <div className='main-bottom-left'>
           <div className='main-bottom-display-left'>
-            <div className='main-bottom-left-display'>
+            <div className='main-bottom-left-display-top'>
               <h1 className='main-display'>
                 {displayText}
               </h1>
             </div>
-            <div className='main-bottom-left-display'>
-              <h1 className='main-display'>
-                {displayText}
+            <div className='main-bottom-left-display-bottom'>
+              <h1 className='main-display-list'>
+                {formatarFila()}
               </h1>
             </div>
           </div>
           <div className='main-bottom-left-button'>
-            <ControllerPassword atualizarDisplay={atualizarDisplay} />
+            <ControllerPassword atualizarDisplay={atualizarDisplay} atualizarFila={atualizarFila} />
           </div>
         </div>
       </div>

@@ -1,35 +1,45 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import './index.css'
 import Button from '../Button/index'
 
-function ControllerPassword({ atualizarDisplay }) {
+function ControllerPassword({ atualizarDisplay, atualizarFila }) {
     const [fila, setFila] = useState([]);
 
     const adicionarSenha = (tipo) => {
         const numero = fila.length + 1;
         const novaSenha = { tipo, numero };
-        setFila([...fila, novaSenha]);
+        const novaFila = [...fila, novaSenha];
+        setFila(novaFila);
     };
 
     const chamarButton = () => {
         if (fila.length === 0) {
-            atualizarDisplay('A fila está vazia!');
+            atualizarDisplay('Espere ser Chamado!');
             return;
         }
 
+        let senhaChamada = null;
         const preferencial = fila.find(senha => senha.tipo === 'Preferencial');
         if (preferencial) {
+            senhaChamada = preferencial;
             setFila(fila.filter(senha => senha !== preferencial));
-            atualizarDisplay(`${preferencial.tipo}: ${preferencial.numero}`);
-            return;
+        } else {
+            const normal = fila.find(senha => senha.tipo === 'Normal');
+            if (normal) {
+                senhaChamada = normal;
+                setFila(fila.filter(senha => senha !== normal));
+            }
         }
 
-        const normal = fila.find(senha => senha.tipo === 'Normal');
-        if (normal) {
-            setFila(fila.filter(senha => senha !== normal));
-            atualizarDisplay(`${normal.tipo}: ${normal.numero}`);
+        if (senhaChamada) {
+            atualizarDisplay(`${senhaChamada.tipo}: ${senhaChamada.numero}`);
         }
     };
+
+    useEffect(() => {
+        atualizarFila(fila);
+    }, [fila]);
+
     return (
         <div className='controller-password-container'>
             <Button text="Normal" className="secondary" onClick={() => adicionarSenha('Normal')} />

@@ -3,7 +3,7 @@
 .main-container {
     display: flex;
     height: 845px;
-    width: 1800px;
+    width: 1920px;
     background-color: var(--cor-1);
 }
 
@@ -14,7 +14,6 @@
     width: 960px;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -26,7 +25,6 @@
     align-items: center;
     justify-content: center;
     height: 300px;
-    background-color: blue;
 }
 
 .main-titles-left {
@@ -53,20 +51,21 @@
 
 .main-bottom-left {
     display: flex;
-    height: 300px;
+    height: 545px;
     width: 840px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: chartreuse;
 }
 
 .main-bottom-display-left {
     display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.main-bottom-left-display {
-    height: 150px;
+.main-bottom-left-display-top {
+    height: 50px;
     width: 350px;
     display: flex;
     align-items: center;
@@ -77,10 +76,49 @@
     margin: 10px;
 }
 
+.main-bottom-left-display-bottom {
+    height: 335px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-4);
+    box-shadow: 0px 5px 30px var(--cor-4);
+    border-radius: 8px;
+    margin: 5px;
+}
+
 .main-display {
     color: var(--cor-2);
     font-size: 35px;
     text-shadow: 0px 1px 30px var(--cor-2);
+}
+
+.main-fila-vazia {
+    color: var(--cor-2);
+    font-size: 75px;
+    text-shadow: 0px 1px 30px var(--cor-2);
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+}
+
+.main-display-list {
+    height: 320px;
+    width: 785px;
+    max-width: 785px;
+    max-height: 320px;
+    grid-template-columns: repeat(auto-fill, minmax(115px, 1px));
+    grid-auto-rows: min-content;
+    overflow-y: auto;
+    display: grid;
+    justify-content: center;
+    color: var(--cor-2);
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 0px 1px 30px var(--cor-2);
+    gap: 5px;
 }
 
 .main-bottom-left-button {

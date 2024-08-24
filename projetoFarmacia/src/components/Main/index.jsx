@@ -24,9 +24,16 @@ function Main() {
     ));
   };
 
+  const [modal, setModal] = useState(false);
+
   function queroParticipar() {
-    alert("Quero Participar")
+    setModal(true);
   }
+
+  function fecharModal() {
+    setModal(false);
+  }
+
   return (
     <div className='main-container'>
       <div className='main-left'>
@@ -59,9 +66,21 @@ function Main() {
           <p className='main-title'>Inauguração Imperdível! Descontos Especiais</p>
           <p className='main-title'>e Brindes Exclusivos Esperam por Você na Nossa Nova Farmácia!</p>
         </div>
-        <img className='main-image' src="./images/farmacia.png" alt="Imagem de duas mãos segurando um coração flutuante, e na parte de baixo escrito Farmárcia bem grande e como sub-title escrito Sob Nova Direção (Ex Farmário)" />
+        <img className='main-image' src="./images/farmacia.png" alt="" />
         <Button text="Quero Participar" className="primary" onClick={queroParticipar} />
       </div>
+
+      {modal && (
+        <div className='modal-overlay'>
+          <div className='modal-content'>
+            <button className='modal-close-button' onClick={fecharModal}>X</button>
+            <h2>Estamos Te Esperando!</h2>
+            <p>Estamos animados com sua participação na nossa inauguração! <br/> Sua presença tornará este momento ainda mais especial para todos nós.</p>
+            <button className='modal-content-button' onClick={fecharModal}>Confirmar</button>
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }

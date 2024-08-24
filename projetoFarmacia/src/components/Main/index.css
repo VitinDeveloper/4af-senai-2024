@@ -153,3 +153,61 @@
     margin-top: 10px;
     box-shadow: 0px 5px 30px var(--cor-2);
 }
+
+/* modal */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--cor-2), 0.2);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--cor-2);
+    padding: 20px;
+    font-size: 17px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px var(--cor-1);
+    border: 3px solid var(--cor-1);
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close-button:hover {
+    color: var(--cor-4);
+}
+
+.modal-content-button {
+    background-color: var(--cor-1);
+    color: var(--cor-5);
+    font-size: 20px;
+    border: 3px solid var(--cor-5);
+    border-radius: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+    height: 45px;
+    width: 100px;
+}
+
+.modal-content-button:hover {
+    background-color: var(--cor-4);
+}

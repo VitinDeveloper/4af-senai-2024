@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './index.css'
 import Button from '../Button'
 import ControllerPassword from '../ControllerPassword'
+import Carrossel from '../Carrossel'
 
 function Main() {
   const [displayText, setDisplayText] = useState('Espere ser Chamado!');
@@ -33,6 +34,13 @@ function Main() {
   function fecharModal() {
     setModal(false);
   }
+
+  const images = [
+    './images/farmacia.png',
+    './images/farmacia-placa.png',
+    './images/farmacia-cartoes.png',
+    './images/farmacia-camisetas.png',
+  ];
 
   return (
     <div className='main-container'>
@@ -66,7 +74,7 @@ function Main() {
           <p className='main-title'>Inauguração Imperdível! Descontos Especiais</p>
           <p className='main-title'>e Brindes Exclusivos Esperam por Você na Nossa Nova Farmácia!</p>
         </div>
-        <img className='main-image' src="./images/farmacia.png" alt="" />
+        <Carrossel images={images}/>
         <Button text="Quero Participar" className="primary" onClick={queroParticipar} />
       </div>
 

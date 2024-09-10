@@ -7,7 +7,7 @@ import Home from './pages/Home'
 import Viagens from './pages/Viagens'
 
 function App() {
-  const [logado, setLogado] = useState(1)
+  const [logado, setLogado] = useState(true)
   const [idade, setIdade] = useState(0)
   const [pagina, setPagina] = useState(<Home />)
   return (
